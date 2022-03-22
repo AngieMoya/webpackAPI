@@ -11,8 +11,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].[contenthash].js",
-    assetModuleFilename:'assets/images/[hash]ext][query]'
+    filename: "js/[name].[contenthash].js",
+    assetModuleFilename:'assets/images/[hash][ext][query]'
   },
   resolve: {
     extensions: [".js"],
@@ -59,7 +59,6 @@ module.exports = {
       }
     ]
   },
- 
   plugins: [
     new HtmlWebpackPlugin({
       inject : true,

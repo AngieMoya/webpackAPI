@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
-    assetModuleFilename:'assets/images/[hash]ext][query]'
+    assetModuleFilename:'assets/images/[hash][ext][query]'
   },
   mode:'development',
   watch: true,
@@ -58,7 +58,6 @@ module.exports = {
       }
     ]
   },
- 
   plugins: [
     new HtmlWebpackPlugin({
       inject : true,
